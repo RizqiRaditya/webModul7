@@ -1,0 +1,104 @@
+/* Styling custom untuk header */
+.header {
+    background-image: url("Hotel1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Menata kontainer utama untuk Flexbox */
+.content-wrapper {
+    display: flex; /* Menggunakan Flexbox untuk menata elemen secara horizontal */
+    flex-direction: row; /* Menjaga elemen tetap berada dalam satu baris */
+    justify-content: flex-start; /* Pastikan semuanya diatur dari kiri */
+    min-height: 100vh;
+}
+
+/* Styling untuk leftbar yang berisi video */
+.leftbar {
+    width: 300px; /* Menentukan lebar fixed untuk leftbar */
+    padding: 20px;
+    margin-right: 20px; /* Menambahkan jarak antara leftbar dan konten utama */
+    flex-shrink: 0; /* Memastikan leftbar tidak mengecil */
+    box-sizing: border-box; /* Agar padding tidak menambah ukuran */
+}
+
+/* Styling untuk video-container agar video tampil kecil */
+.video-container {
+    margin-bottom: 15px;
+}
+
+.video-container iframe {
+    width: 100%; /* Membuat video responsif */
+    height: auto; /* Menyesuaikan tinggi video dengan lebar */
+    border: none;
+}
+
+/* Konten utama (tepat di sebelah kanan video) */
+.main-content {
+    flex: 1; /* Konten utama mengisi ruang yang tersisa */
+    padding: 20px;
+    box-sizing: border-box; /* Agar padding tidak menambah ukuran */
+}
+
+/* Responsif untuk perangkat lebih kecil */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Pada layar kecil, kita atur menjadi vertikal */
+    }
+
+    .leftbar {
+        width: 100%; /* Menjadikan leftbar penuh pada layar kecil */
+        margin-right: 0;
+    }
+
+    .main-content {
+        margin-left: 0; /* Menghapus margin kiri pada layar kecil */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Menyesuaikan ukuran video */
+        height: auto;
+    }
+}
+
+/* Footer styling - memastikan footer berada di bagian paling bawah */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Flexbox untuk menata halaman agar footer tetap di bawah */
+.content-wrapper {
+    flex-direction: column;
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+}
